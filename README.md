@@ -5,16 +5,20 @@ Implementar una API REST simple para gestionar libros y préstamos de una biblio
 
 ## Estructura del Proyecto
 ```
-api/
-├── config/
-│   └── MockData.php      # Datos de ejemplo
-├── models/
-│   ├── Book.php          # Modelo de libros
-│   └── Loan.php          # Modelo de préstamos
-├── controllers/
-│   ├── BookController.php # Controlador de libros
-│   └── LoanController.php # Controlador de préstamos
-└── index.php             # Punto de entrada y routing
+├── api/
+│   ├── config/
+│   │   └── MockData.php          # Datos de ejemplo en memoria
+│   ├── controllers/
+│   │   ├── BookController.php    # Controlador de libros
+│   │   └── LoanController.php    # Controlador de préstamos
+│   ├── helpers/
+│   │   └── ApiHelper.php         # Utilidades y funciones comunes
+│   ├── models/
+│   │   ├── Book.php             # Modelo de libros
+│   │   └── Loan.php             # Modelo de préstamos
+│   └── index.php                 # Punto de entrada de la API
+├── README.md                     # Instrucciones del ejercicio
+└── SOLUTION_GUIDE.md            # Guía de solución y explicación
 ```
 
 ## Endpoints a Implementar
@@ -26,6 +30,7 @@ GET    /api/books/{isbn}   - Obtener libro
 POST   /api/books          - Crear libro
 PUT    /api/books/{isbn}   - Actualizar libro
 DELETE /api/books/{isbn}   - Eliminar libro
+GET    /api/books/search   - Buscar libros (Desafío)
 ```
 
 ### Préstamos
